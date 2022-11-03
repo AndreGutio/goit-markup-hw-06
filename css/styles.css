@@ -797,7 +797,6 @@ body {
 }
 
 /*M-O-D-A-L  W-I-N-D-O-W*/
-
 .overlay-modal {
   position: fixed;
   top: 0;
@@ -877,7 +876,6 @@ body {
 }
 
 /* F O R M S*/
-
 .form-application {
   padding: 40px;
 }
@@ -921,6 +919,9 @@ body {
   padding: 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field textarea {
@@ -943,10 +944,13 @@ body {
   top: 32px;
   left: 15px;
   fill: #212121;
-  /* margin-right: 15px; */
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus + .form-icon {
+  fill: var(--primary-accent-color);
 }
 
 .form-field:hover .form-icon,
@@ -956,7 +960,8 @@ body {
 
 .form-field input:hover,
 .form-field input:focus {
-  border-color: #2196f3;
+  outline: none;
+  border: 1px solid #2196f3;
 }
 
 textarea {
@@ -974,14 +979,16 @@ textarea {
   margin-bottom: 30px;
 }
 
-.form-agreement input[type="checkbox"] {
-  /* background: #212121;
-  width: 16px;
-  height: 15px; */
+.form-field textarea:hover,
+.form-field textarea:focus {
+  outline: none;
+  border: 1px solid #2196f3;
 }
 
+/* .form-agreement input[type="checkbox"] {
+} */
+
 .form-agreement label {
-  margin-left: 8.38px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -995,8 +1002,35 @@ textarea {
   color: var(--primary-accent-color);
 }
 
+.checkbox-agreement {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.form-agreement-label {
+  display: inline-block;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-image: url('../images/icons/no-check.svg');
+}
+
+.checkbox-agreement:checked + .checkbox-icon {
+  border-color: transparent;
+  background-color: var(--primary-accent-color);
+  border-radius: 2px;
+  background-image: url('../images/icons/full-check.svg');
+  background-size: contain;
+  background-origin: border-box;
+  
+}
 .form-btn {
-  /*boton*/
+  /*form boton*/
   margin: 0 140px;
   width: 200px;
   height: 50px;
@@ -1018,7 +1052,7 @@ textarea {
 }
 
 .form-btn-text {
-  /*boton text*/
+  /*form boton text*/
   font-family: inherit;
   font-style: normal;
   font-weight: 700;

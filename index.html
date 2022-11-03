@@ -411,7 +411,7 @@
           </h1>
           <div class="form-field">
             <label for="name">Ім'я</label>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="name" class="modal-input" />
             <svg class="form-icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-name-form"></use>
             </svg>
@@ -419,7 +419,7 @@
 
           <div class="form-field">  
             <label for="tel">Телефон</label>
-            <input type="text" name="tel" id="tel" />
+            <input type="text" name="tel" id="tel" class="modal-input" />
             <svg class="form-icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-tel-form"></use>
             </svg>
@@ -427,7 +427,7 @@
 
           <div class="form-field">
             <label for="email">Пошта</label>
-            <input type="text" name="email" id="email" />
+            <input type="text" name="email" id="email" class="modal-input" />
             <svg class="form-icon" width="18px" height="18px">
               <use href="./images/icons.svg#icon-email-form"></use>
             </svg>
@@ -439,8 +439,14 @@
           </div>
 
           <div class="form-agreement">
-            <input type="checkbox" name="agreement" id="yes"/>
-            <label for="yes">Погоджуюся з розсилкою та приймаю <a href="policy" class="form-agreement-yes">Умови договору</a></label>
+            <label class="form-agreement-label">
+              <input class="checkbox-agreement" type="checkbox" name="agreement"/>
+              <span class="checkbox-icon"></span>
+              Погоджуюся з розсилкою та приймаю 
+              <a href="policy" class="form-agreement-yes">Умови договору</a>
+            </label>
+            
+            
           </div>
 
           <button class="form-btn form-btn-text" type="submit">Відправити</button>
