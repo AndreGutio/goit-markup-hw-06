@@ -967,14 +967,14 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
   transition-property: fill, border;
   transition-duration: 3250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
 }
 
-.form-field input {
-  margin-bottom: 10px;
+.form-field-last {
+  margin-bottom: 20px;
 }
 .form-field label {
   margin-bottom: 4px;
@@ -1000,8 +1000,6 @@ body {
 .form-field textarea {
   padding: 12px 16px;
   height: 120px;
-  margin-bottom: 20px;
-  
 }
 
 .form-field::placeholder {
