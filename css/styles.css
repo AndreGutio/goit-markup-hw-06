@@ -1066,6 +1066,7 @@ textarea {
 
 .form-agreement-yes {
   color: var(--primary-accent-color);
+  margin-left: 5px;
 }
 
 .checkbox-agreement {
