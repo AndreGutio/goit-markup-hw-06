@@ -660,6 +660,12 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-bg-color);
   margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
 }
 
 .subscribe-form input {
